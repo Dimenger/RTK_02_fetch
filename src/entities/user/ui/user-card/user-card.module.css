@@ -1,0 +1,109 @@
+.user {
+    border: solid 2px violet;
+    border-radius: 8px;
+    list-style: none;
+    text-align: left;
+    padding: 10px 25px 10px;
+    margin: 5px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.user:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.user ul li {
+    padding: 4px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.user ul li:last-child {
+    border-bottom: none;
+}
+
+.user ul li button {
+    margin-right: 8px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.user ul li button:first-of-type {
+    background: #ffc107;
+    color: #000;
+}
+
+.user ul li button:first-of-type:hover {
+    background: #e0a800;
+}
+
+.user ul li button:last-of-type {
+    background: #dc3545;
+    color: #fff;
+}
+
+.user ul li button:last-of-type:hover {
+    background: #c82333;
+}
+
+.editForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: solid 2px orange;
+    border-radius: 8px;
+    list-style: none;
+    text-align: left;
+    padding: 15px;
+    margin: 5px;
+}
+
+.editForm input,
+.editForm select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.editForm label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.editFormButtons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.editFormButtons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.editFormButtons button[type="submit"] {
+    background: #28a745;
+    color: white;
+}
+
+.editFormButtons button[type="submit"]:hover {
+    background: #218838;
+}
+
+.editFormButtons button[type="button"] {
+    background: #6c757d;
+    color: white;
+}
+
+.editFormButtons button[type="button"]:hover {
+    background: #5a6268;
+}
