@@ -23,7 +23,9 @@ export const INITIAL_USER_FORM: UserFormData = {
   score: 0,
 };
 
-export interface ApiResponse {
+export interface ApiResponse<T = null> {
   success: boolean;
-  message?: string; // необязательное поле, если сервер присылает текст
+  status: number;
+  message?: string;
+  data?: T;
 }

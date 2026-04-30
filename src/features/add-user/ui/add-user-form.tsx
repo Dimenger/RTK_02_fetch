@@ -1,11 +1,12 @@
-import type { UserFormData } from "../../../shared/types";
-import { ROLES } from "../../../constants";
 import { type ChangeEvent, type SubmitEvent } from "react";
+import { ROLES } from "../../../constants";
+import type { UserFormData } from "../../../shared/types";
 import styles from "./add-user-form.module.css";
 
 interface AddUserFormProps {
   userForm: UserFormData;
   isVisible: boolean;
+  isSubmitting: boolean;
   handleChange: (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
   handleSubmit: (e: SubmitEvent<HTMLFormElement>) => void;
   onCancel: () => void;
@@ -14,6 +15,7 @@ interface AddUserFormProps {
 export const AddUserForm = ({
   userForm,
   isVisible,
+  isSubmitting,
   handleChange,
   handleSubmit,
   onCancel,
@@ -85,7 +87,11 @@ export const AddUserForm = ({
       />
 
       <div className={styles.formButtons}>
-        <button type="submit" className={styles.submitBtn}>
+        <button
+          type="submit"
+          className={styles.submitBtn}
+          disabled={isSubmitting}
+        >
           Создать пользователя
         </button>
         <button type="button" onClick={onCancel} className={styles.cancelBtn}>
